@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "SF Pro";
+  src: url("./assets/fonts/SFPRODISPLAYREGULAR.OTF");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: url("./assets/fonts/SFPRODISPLAYMEDIUM.OTF");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: url("./assets/fonts/SFPRODISPLAYBOLD.OTF");
+  font-weight: 700;
+}
+
+* {
+  font-family: "SF Pro";
+}
+
+/* Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Chrome, Safari and Opera */
+.noscroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.noscroll-bar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
