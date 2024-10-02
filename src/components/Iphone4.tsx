@@ -1,8 +1,8 @@
 import bg from "../assets/iphone-bg1.png";
+import search from "../assets/search.svg";
 import iphoneStatus from "../assets/iphone-status.svg";
 import iphoneTabbar from "../assets/iphone-tabbar3.png";
 import options from "../assets/options.svg";
-import plus from "../assets/plus.svg";
 import recommended1 from "../assets/recommended1.png";
 import recommended2 from "../assets/recommended2.png";
 import recommended3 from "../assets/recommended3.png";
@@ -64,8 +64,7 @@ export default function Iphone4() {
           </div>
 
           <div className="bg-white/10 py-2 px-2 self-stretch border border-white/15 rounded-[10px] flex items-center gap-2">
-            {/* TODO: Search */}
-            <img src={plus} />
+            <img src={search} />
             <div className="text-sm text-white/40">Search</div>
           </div>
         </div>

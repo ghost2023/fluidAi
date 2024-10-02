@@ -4,15 +4,11 @@ import scroll from "../assets/scroll.svg";
 import ticket from "../assets/ticket.png";
 
 import { useEffect, useRef, useState } from "react";
-import {
-  Parallax,
-  useParallaxController
-} from "react-scroll-parallax";
+import { Parallax, useParallaxController } from "react-scroll-parallax";
 import glowCloud from "../assets/glow-cloud.svg";
 import heroImg1 from "../assets/hero-image1.png";
 import heroImg2 from "../assets/hero-img2.png";
 import Logo from "./Logo";
-
 
 export default function Hero() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -65,7 +61,7 @@ export default function Hero() {
             endScroll={window.innerHeight * 1.55}
             onProgressChange={setItemsProgress}
             speed={10}
-          // easing={"easeInOutCubic"}
+            // easing={"easeInOutCubic"}
           >
             <div className="absolute w-full"></div>
           </Parallax>
@@ -180,7 +176,7 @@ export default function Hero() {
               <div
                 className="absolute right-0 top-0"
                 style={{
-                  transform: `translateX(${170 - itemsProgress * 170}%)`,
+                  transform: `translateX(${240 - itemsProgress * 240}%)`,
                 }}
               >
                 <div className="rounded-[20px] bg-[#262626]/30 -left-28 w-fit translate-y-[40%] px-6 py-3 text-xl relative border border-white/10">

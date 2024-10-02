@@ -1,8 +1,12 @@
+import clock from "../assets/clock.png";
+import hamburger from "../assets/hamburger.svg";
 import bg from "../assets/iphone-bg2.png";
 import iphoneStatus from "../assets/iphone-status.svg";
 import iphoneTabbar from "../assets/iphone-tabbar1.png";
 import plus from "../assets/plus.svg";
 import sort from "../assets/sort.svg";
+import stack from "../assets/stack.png";
+import search from "../assets/search.svg";
 import IphoneFrame from "./IphoneFrame";
 
 export default function Iphone2() {
@@ -98,20 +102,16 @@ export default function Iphone2() {
             </div>
             <div className="flex rounded-full p-0.5 border border-white/20 gap-0.5">
               <div className="rounded-full flex items-center justify-center bg-white/20 backdrop-blur-[14px] shrink-0 grow size-8">
-                {/* TODO: Stack */}
-
-                <img src={plus} />
+                <img src={stack} />
               </div>
               <div className="rounded-full flex items-center justify-center shrink-0 grow size-8">
-                {/* TODO: Hamburger */}
-                <img src={plus} />
+                <img src={hamburger} />
               </div>
             </div>
           </div>
 
           <div className="bg-white/10 py-2 px-2 self-stretch border border-white/15 rounded-[10px] flex items-center gap-2">
-            {/* TODO: Search */}
-            <img src={plus} />
+            <img src={search} />
             <div className="text-sm text-white/40">Search</div>
           </div>
 
@@ -127,13 +127,14 @@ export default function Iphone2() {
             </div>
             <div className="flex justify-between items-center">
               <div className="flex gap-1 items-center ">
-                {/* TODO: Clock */}
-                <img src={plus} className="size-4" />
+                <img src={clock} className="size-4" />
                 <div className="text-xs text-white/60">10:00 - 10:20 AM</div>
               </div>
 
-              {/* TODO: Clock */}
-              <img src={plus} className="size-7" />
+              <img
+                src={"https://picsum.photos/200"}
+                className="size-7 rounded-full overflow-hidden"
+              />
             </div>
           </div>
 
@@ -149,13 +150,11 @@ export default function Iphone2() {
             </div>
             <div className="flex justify-between items-center">
               <div className="flex gap-1 items-center ">
-                {/* TODO: Clock */}
-                <img src={plus} className="size-4" />
+                <img src={clock} className="size-4" />
                 <div className="text-xs text-white/60">10:00 - 10:20 AM</div>
               </div>
 
-              {/* TODO: Clock */}
-              <img src={plus} className="size-7" />
+              <img src={"https://picsum.photos/200"} className="size-7" />
             </div>
           </div>
         </div>

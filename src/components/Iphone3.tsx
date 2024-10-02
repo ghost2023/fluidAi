@@ -1,8 +1,12 @@
+import facebook from "../assets/facebook.png";
+import gear from "../assets/gear.svg";
+import insta from "../assets/insta.png";
 import bg from "../assets/iphone-bg2.png";
 import iphoneStatus from "../assets/iphone-status.svg";
 import iphoneTabbar from "../assets/iphone-tabbar2.png";
 import plus from "../assets/plus.svg";
-import sort from "../assets/sort.svg";
+import search from "../assets/search.svg";
+import whatsapp from "../assets/whatsapp.png";
 import IphoneFrame from "./IphoneFrame";
 
 export default function Iphone3() {
@@ -14,7 +18,7 @@ export default function Iphone3() {
       unread: 6,
       profilePicture:
         "https://xsgames.co/randomusers/assets/avatars/female/41.jpg",
-      social: "https://picsum.photos/id/10/200/200",
+      social: facebook,
       lastOnline: "2 min ago",
     },
     {
@@ -24,7 +28,7 @@ export default function Iphone3() {
       unread: 2,
       profilePicture:
         "https://xsgames.co/randomusers/assets/avatars/male/41.jpg",
-      social: "https://picsum.photos/id/10/200/200",
+      social: facebook,
       lastOnline: "12 min ago",
     },
     {
@@ -34,7 +38,7 @@ export default function Iphone3() {
       unread: 1,
       profilePicture:
         "https://xsgames.co/randomusers/assets/avatars/female/40.jpg",
-      social: "https://picsum.photos/id/10/200/200",
+      social: insta,
       lastOnline: "20 min ago",
     },
     {
@@ -43,7 +47,7 @@ export default function Iphone3() {
       unread: 0,
       profilePicture:
         "https://xsgames.co/randomusers/assets/avatars/female/46.jpg",
-      social: "https://picsum.photos/id/10/200/200",
+      social: whatsapp,
       lastOnline: "1 hour ago",
     },
     {
@@ -52,7 +56,7 @@ export default function Iphone3() {
       unread: 0,
       profilePicture:
         "https://xsgames.co/randomusers/assets/avatars/female/47.jpg",
-      social: "https://picsum.photos/id/10/200/200",
+      social: facebook,
       lastOnline: "1 hour ago",
     },
     {
@@ -61,15 +65,16 @@ export default function Iphone3() {
       unread: 0,
       profilePicture:
         "https://xsgames.co/randomusers/assets/avatars/female/45.jpg",
-      social: "https://picsum.photos/id/10/200/200",
+      social: facebook,
       lastOnline: "1 hour ago",
     },
     {
       name: "Sabila Sayma",
       lastMessage: "Have a good day!",
       unread: 0,
-      profilePicture: "https://picsum.photos/id/10/200/200",
-      social: "https://picsum.photos/id/10/200/200",
+      profilePicture:
+        "https://xsgames.co/randomusers/assets/avatars/female/21.jpg",
+      social: facebook,
       lastOnline: "1 hour ago",
     },
   ];
@@ -89,8 +94,7 @@ export default function Iphone3() {
             </div>
             <div className="flex gap-1">
               <div className="size-8 p-1.5 border border-white/20 rounded-full flex justify-center items-center">
-                {/* TODO: gear */}
-                <img src={sort} />
+                <img src={gear} />
               </div>
               <div className="size-8 p-1.5 border border-white/20 rounded-full flex justify-center items-center">
                 <img src={plus} />
@@ -99,8 +103,7 @@ export default function Iphone3() {
           </div>
 
           <div className="bg-white/10 py-2 px-2 self-stretch border border-white/15 rounded-[10px] flex items-center gap-2">
-            {/* TODO: Search */}
-            <img src={plus} />
+            <img src={search} />
             <div className="text-sm text-white/40">Search</div>
           </div>
         </div>
@@ -133,15 +136,13 @@ export default function Iphone3() {
           {chats.map((chat, i) => (
             <div key={i} className="flex items-start gap-2.5">
               <div className="relative shrink-0 pt-2.5 ">
-                {/* TODO: Profile */}
                 <img
                   className="bg-white size-9 rounded-full overflow-hidden"
                   src={chat.profilePicture}
                 />
 
-                {/* TODO: Social */}
                 <img
-                  className="absolute bottom-0 right-0 bg-blue-200 size-2 rounded-full overflow-hidden"
+                  className="absolute bottom-0 right-0 bg-blue-200 size-3 rounded-full overflow-hidden"
                   src={chat.social}
                 />
               </div>
