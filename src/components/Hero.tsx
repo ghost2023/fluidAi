@@ -19,7 +19,7 @@ export default function Hero() {
   const [itemsProgress, setItemsProgress] = useState(0);
   const parallaxController = useParallaxController();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const scale = windowWidth < 720 ? 0.6 : (windowWidth < 960 ? 0.8 : 1);
+  const scale = windowWidth < 720 ? 0.6 : windowWidth < 960 ? 0.8 : 1;
 
   useEffect(() => {
     const handleResize = () => {
@@ -57,7 +57,7 @@ export default function Hero() {
   }, [containerRef.current]);
 
   return (
-    <div className="h-[320vh] relative w-full overflow-hidden">
+    <div className="h-[300vh] relative w-full overflow-hidden">
       <div id="container1" ref={containerRef} className="relative h-screen ">
         <div
           className={`absolute flex flex-col items-center bottom-[7%] left-1/2 -translate-x-1/2 gap-2 ${isVisible ? "opacity-100" : "opacity-0"} transition-all duration-300`}
@@ -83,19 +83,16 @@ export default function Hero() {
             endScroll={window.innerHeight}
             onProgressChange={setLogoProgress}
             style={{ transform: `translateX(-50%)` }}
-            translateY={["0%", "-36%"]}
+            translateY={["0%", "-38%"]}
             disabled={cloudProgres > 0}
-            rootMargin={{
-              bottom: 0,
-              top: window.innerHeight * 0,
-              left: 0,
-              right: 0,
-            }}
-            className={`${cloudProgres != 1 ? "fixed top-0 " : "absolute opacity-0 top-20"} h-screen z-[1] flex items-center`}
+            className={`${cloudProgres < 0.9 ? "fixed top-0 " : "absolute opacity-0 -top-20"} h-screen z-[1] flex items-center`}
           >
             <div
               style={{
-                transform: `translateY(-${window.innerHeight * cloudProgres * 1.5}px)`,
+                transform:
+                  cloudProgres > 0
+                    ? `translateY(-${window.innerHeight * cloudProgres + window.innerHeight * 0.38}px)`
+                    : "",
               }}
               className={`w-screen  relative pb-1 z-[1] flex flex-col items-center justify-center`}
             >
@@ -129,7 +126,7 @@ export default function Hero() {
                   Join Waitlist
                 </button>
               </div>
-              <div className="absolute overflow-x-hidden w-[200vw] md:w-[120vw] -top-28 left-[50vw] -translate-y-0 -translate-x-1/2 ">
+              <div className="absolute overflow-x-hidden w-[200vw] h-[120vh] sm:h-[100vh] md:h-auto md:w-[120vw] -top-16 sm:-top-20 md:-top-24 left-[50vw] -translate-y-0 -translate-x-1/2 ">
                 <img src={glowCloud} className="h-full w-full object-cover" />
               </div>
               <div
@@ -192,7 +189,7 @@ export default function Hero() {
               </div>
 
               <div
-                className="absolute right-0 w-[30vw] top-0 "
+                className="absolute right-0 w-[35vw] top-0 "
                 style={{
                   transform: `translateX(${100 - itemsProgress * 100 * scale}%) scale(${scale})`,
                 }}
