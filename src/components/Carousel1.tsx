@@ -72,7 +72,13 @@ function CarouselItem1({ goBack, goNext }: CarouselItemProps) {
         >
           <img src={leftArrow} className="w-5 h-5" />
         </button>
-        <div className="p-7 border border-white/40 w-screen max-w-[500px] h-[75vh]  bg-gradient-to-b from-[#BABABA00] to-[#BABABA66] rounded-[32px] flex flex-col justify-between">
+        <div
+          style={{
+            clipPath:
+              "polygon(0 0, 60% 0, 60% 5%, 99% 5%, 99% 0, 100% 0, 100% 100%, 0 100%)",
+          }}
+          className="p-7 border border-white/40 w-screen max-w-[500px] h-[75vh]  bg-gradient-to-b from-[#BABABA00] to-[#BABABA66] rounded-[32px] flex flex-col justify-between"
+        >
           <p className="text-xl leading-tight font-medium max-w-[246px] opacity-90">
             Fluid has Internet access, so you can get up-to-date information
             from it.
@@ -105,7 +111,13 @@ function CarouselItem2({ goBack, goNext }: CarouselItemProps) {
         >
           <img src={leftArrow} className="w-5 h-5" />
         </button>
-        <div className="p-7 border border-white/40 w-screen max-w-[500px] h-[75vh]  bg-gradient-to-b from-[#BABABA00] to-[#BABABA66] rounded-[32px] flex flex-col justify-between">
+        <div className="p-7 w-screen max-w-[500px] relative h-[75vh]  bg-gradient-to-b from-[#BABABA00] to-[#BABABA66] rounded-[32px] flex flex-col justify-between">
+          <div
+            style={{
+              clipPath: "polygon(0 40%, 100% 50%,  100% 100%, 0 100%)",
+            }}
+            className="border border-white/40 absolute inset-0 rounded-[32px]"
+          ></div>
           <p className="text-xl leading-tight font-medium max-w-[246px] opacity-90">
             You can use Fluid as an assistant to save time - and save your
             sanity.
@@ -138,7 +150,13 @@ function CarouselItem3({ goBack, goNext }: CarouselItemProps) {
         >
           <img src={leftArrow} className="w-5 h-5" />
         </button>
-        <div className="p-7 border border-white/40 w-screen max-w-[500px] h-[75vh]  bg-gradient-to-b from-[#BABABA00] to-[#BABABA66] rounded-[32px] flex flex-col justify-between">
+        <div
+          style={{
+            clipPath:
+              "polygon(0 0, 53% 0, 53% 5%, 95% 5%, 95% 0, 100% 0, 100% 100%, 0 100%)",
+          }}
+          className="p-7 border border-white/40 w-screen max-w-[500px] h-[75vh]  bg-gradient-to-b from-[#BABABA00] to-[#BABABA66] rounded-[32px] flex flex-col justify-between"
+        >
           <p className="text-xl leading-tight font-medium max-w-[246px] opacity-90">
             Fluid easily integrates with your friends' calendars
           </p>
