@@ -25,8 +25,8 @@ function App() {
             life
           </h3>
         </div>
-        <div className="flex justify-center">
-          <div className="px-6 sm:px-14 md:px-[72px] ">
+        <div className="flex justify-center md:justify-stretch">
+          <div className="px-6 sm:px-14 md:px-[72px] md:w-full">
             <div className="flex flex-col-reverse text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
               <div className="flex flex-col flex-1 max-w-[334px]">
                 <div className="h-4"></div>
