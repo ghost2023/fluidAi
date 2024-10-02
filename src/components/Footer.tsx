@@ -2,7 +2,7 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <div className="flex gap-36 justify-between px-[36px] py-16 mt-1 h-[64vh]">
+    <div className="flex gap-10 md:gap-20 lg:gap-36 flex-col md:flex-row justify-between px-4 sm:px-7 md:px-[36px] py-16 mt-1 h-[64vh]">
       <div className="grow ">
         <Logo size={40} />
         <p className="text-sm text-white/50 font-medium mt-7 pl-1">

@@ -6,7 +6,7 @@ type Props = {
 };
 export default function IphoneFrame({ children }: Props) {
   return (
-    <div className="relative w-[335px] shrink-0">
+    <div className="relative w-[335px] scale-[0.85] sm:scale-100 shrink-0">
       <div className="absolute inset-4 overflow-hidden rounded-[32px]">
         {children}
       </div>

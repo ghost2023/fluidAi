@@ -18,15 +18,15 @@ function App() {
       <div className="bg-black min-h-screen  text-white ">
         <Navbar />
         <Hero />
-        <div className="flex flex-col gap-2 items-center py-24 font-medium">
+        <div className="mt-60 flex flex-col gap-2 items-center py-24 font-medium">
           <p className="opacity-50">Our Features</p>
-          <h3 className="text-[64px] leading-none text-center max-w-3xl">
+          <h3 className="text-4xl sm:text-5xl md:text-[64px] leading-none mx-10 text-center md:max-w-3xl">
             Fluid AI was born out of a desire to simplify and streamline modern
             life
           </h3>
         </div>
-        <div className="px-[72px] ">
-          <div className="flex justify-between gap-8 pb-12">
+        <div className="px-6 sm:px-14 md:px-[72px] ">
+          <div className="flex flex-col-reverse text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
             <div className="flex flex-col flex-1 max-w-[334px]">
               <div className="h-4"></div>
               <div className="space-y-[36px] mt-auto ">
@@ -45,11 +45,11 @@ function App() {
             </div>
             <Iphone1 />
 
-            <div className="flex flex-col gap-6 flex-1 max-w-[334px]"></div>
+            <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
           </div>
 
-          <div className="flex justify-between gap-8 pb-12">
-            <div className="flex flex-col gap-6 flex-1 max-w-[334px]"></div>
+          <div className="flex flex-col text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
+            <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
             <Iphone2 />
 
             <div className="flex flex-col flex-1 max-w-[334px]">
@@ -70,7 +70,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex justify-between gap-8 pb-12">
+          <div className="flex flex-col-reverse text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
             <div className="flex flex-col flex-1 max-w-[334px]">
               <div className="h-4"></div>
               <div className="space-y-[36px] mt-auto ">
@@ -88,11 +88,11 @@ function App() {
               <div className="opacity-50 mt-auto font-medium">3/4</div>
             </div>
             <Iphone3 />
-            <div className="flex flex-col gap-6 flex-1 max-w-[334px]"></div>
+            <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
           </div>
 
-          <div className="flex justify-between gap-8 pb-12">
-            <div className="flex flex-col gap-6 flex-1 max-w-[334px] "></div>
+          <div className="flex flex-col text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
+            <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
             <Iphone4 />
 
             <div className="flex flex-col flex-1 max-w-[334px]">
@@ -115,7 +115,7 @@ function App() {
         </div>
         <Carousel1 />
 
-        <div className="mx-14 flex gap-24 my-40 justify-between">
+        <div className="mx-14 flex flex-col md:flex-row gap-24 my-40 justify-between">
           <div className="max-w-[420px]">
             <h2 className="text-5xl leading-[1.1] mb-4 mr-8">
               What can curiosity, wonder, and awe do for you?
@@ -139,14 +139,16 @@ function App() {
             <Accordion label="What can curiosity, wonder, and awe do for you?" />
           </div>
         </div>
-        <div
-          style={{ backgroundImage: `url(${glowBg})` }}
-          className="flex min-h-screen relative px-[72px] items-center gap-24 justify-between"
-        >
-          <div className="max-w-lg">
-            <h3 className="text-7xl leading-[1.1] tracking-tight ">
+        <div className="min-h-screen relative py-10 px-6 sm:px-16 md:px-[72px] items-center gap-24 justify-between">
+          <img
+            src={glowBg}
+            className="absolute h-full w-full inset-0 object-cover"
+          />
+          <div className="max-w-lg relative z-[1]">
+            <h3 className="text-3xl md:text-5xl lg:text-7xl leading-[1.1] tracking-tight ">
               Join the Fluid AI Waitlist Today!
             </h3>
+
             <div className="flex flex-col gap-5 max-w-[400px] mt-4">
               <input
                 className="border-b border-white/40 placeholder:text-white/40 text-sm bg-transparent py-2 w-full"
@@ -168,7 +170,7 @@ function App() {
           </div>
           <img
             src={iphone}
-            className="absolute bottom-0 right-1 h-[96%] object-contain"
+            className="relative md:absolute z-[1] bottom-0 right-1  h-64 md:h-[96%] object-contain"
           />
         </div>
         <Footer />
