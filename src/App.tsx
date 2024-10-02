@@ -25,99 +25,101 @@ function App() {
             life
           </h3>
         </div>
-        <div className="px-6 sm:px-14 md:px-[72px] ">
-          <div className="flex flex-col-reverse text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
-            <div className="flex flex-col flex-1 max-w-[334px]">
-              <div className="h-4"></div>
-              <div className="space-y-[36px] mt-auto ">
-                <h4 className="text-[28px] tracking-tight max-w-[320px] leading-none">
-                  Fluid AI: Simplify, Organize, and Achieve More
-                </h4>
-                <p className="opacity-50 font-medium text-[15px] leading-[1.3] max-w-[334px]">
-                  In a world where daily tasks, communication, and goals often
-                  become overwhelming, Fluid AI offers an innovative solution.
-                  Combining advanced AI technology with a user-friendly
-                  interface, it brings together to-do lists, chats, saved items,
-                  and bucket lists into one seamless platform.
-                </p>
+        <div className="flex justify-center">
+          <div className="px-6 sm:px-14 md:px-[72px] ">
+            <div className="flex flex-col-reverse text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
+              <div className="flex flex-col flex-1 max-w-[334px]">
+                <div className="h-4"></div>
+                <div className="space-y-[36px] mt-auto ">
+                  <h4 className="text-[28px] tracking-tight max-w-[320px] leading-none">
+                    Fluid AI: Simplify, Organize, and Achieve More
+                  </h4>
+                  <p className="opacity-50 font-medium text-[15px] leading-[1.3] max-w-[334px]">
+                    In a world where daily tasks, communication, and goals often
+                    become overwhelming, Fluid AI offers an innovative solution.
+                    Combining advanced AI technology with a user-friendly
+                    interface, it brings together to-do lists, chats, saved
+                    items, and bucket lists into one seamless platform.
+                  </p>
+                </div>
+                <div className="opacity-50 mt-auto font-medium">1/4</div>
               </div>
-              <div className="opacity-50 mt-auto font-medium">1/4</div>
+              <Iphone1 />
+
+              <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
             </div>
-            <Iphone1 />
 
-            <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
-          </div>
+            <div className="flex flex-col text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
+              <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
+              <Iphone2 />
 
-          <div className="flex flex-col text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
-            <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
-            <Iphone2 />
-
-            <div className="flex flex-col flex-1 max-w-[334px]">
-              <div className="h-4"></div>
-              <div className="space-y-[36px] mt-auto ">
-                <h4 className="text-[28px] tracking-tight max-w-[320px] leading-none">
-                  Fluid AI: Simplify, Organize, and Achieve More
-                </h4>
-                <p className="opacity-50 font-medium text-[15px] leading-[1.3] max-w-[334px]">
-                  In a world where daily tasks, communication, and goals often
-                  become overwhelming, Fluid AI offers an innovative solution.
-                  Combining advanced AI technology with a user-friendly
-                  interface, it brings together to-do lists, chats, saved items,
-                  and bucket lists into one seamless platform.
-                </p>
+              <div className="flex flex-col flex-1 max-w-[334px]">
+                <div className="h-4"></div>
+                <div className="space-y-[36px] mt-auto ">
+                  <h4 className="text-[28px] tracking-tight max-w-[320px] leading-none">
+                    Fluid AI: Simplify, Organize, and Achieve More
+                  </h4>
+                  <p className="opacity-50 font-medium text-[15px] leading-[1.3] max-w-[334px]">
+                    In a world where daily tasks, communication, and goals often
+                    become overwhelming, Fluid AI offers an innovative solution.
+                    Combining advanced AI technology with a user-friendly
+                    interface, it brings together to-do lists, chats, saved
+                    items, and bucket lists into one seamless platform.
+                  </p>
+                </div>
+                <div className="opacity-50 mt-auto font-medium">2/4</div>
               </div>
-              <div className="opacity-50 mt-auto font-medium">2/4</div>
             </div>
-          </div>
 
-          <div className="flex flex-col-reverse text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
-            <div className="flex flex-col flex-1 max-w-[334px]">
-              <div className="h-4"></div>
-              <div className="space-y-[36px] mt-auto ">
-                <h4 className="text-[28px] tracking-tight max-w-[320px] leading-none">
-                  Fluid AI: Simplify, Organize, and Achieve More
-                </h4>
-                <p className="opacity-50 font-medium text-[15px] leading-[1.3] max-w-[334px]">
-                  In a world where daily tasks, communication, and goals often
-                  become overwhelming, Fluid AI offers an innovative solution.
-                  Combining advanced AI technology with a user-friendly
-                  interface, it brings together to-do lists, chats, saved items,
-                  and bucket lists into one seamless platform.
-                </p>
+            <div className="flex flex-col-reverse text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
+              <div className="flex flex-col flex-1 max-w-[334px]">
+                <div className="h-4"></div>
+                <div className="space-y-[36px] mt-auto ">
+                  <h4 className="text-[28px] tracking-tight max-w-[320px] leading-none">
+                    Fluid AI: Simplify, Organize, and Achieve More
+                  </h4>
+                  <p className="opacity-50 font-medium text-[15px] leading-[1.3] max-w-[334px]">
+                    In a world where daily tasks, communication, and goals often
+                    become overwhelming, Fluid AI offers an innovative solution.
+                    Combining advanced AI technology with a user-friendly
+                    interface, it brings together to-do lists, chats, saved
+                    items, and bucket lists into one seamless platform.
+                  </p>
+                </div>
+                <div className="opacity-50 mt-auto font-medium">3/4</div>
               </div>
-              <div className="opacity-50 mt-auto font-medium">3/4</div>
+              <Iphone3 />
+              <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
             </div>
-            <Iphone3 />
-            <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
-          </div>
 
-          <div className="flex flex-col text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
-            <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
-            <Iphone4 />
+            <div className="flex flex-col text-center  md:text-start md:flex-row justify-between gap-8 pb-12">
+              <div className="hidden md:flex  flex-col gap-6 flex-1 max-w-[334px]"></div>
+              <Iphone4 />
 
-            <div className="flex flex-col flex-1 max-w-[334px]">
-              <div className="h-4"></div>
-              <div className="space-y-[36px] mt-auto ">
-                <h4 className="text-[28px] tracking-tight max-w-[320px] leading-none">
-                  Fluid AI: Simplify, Organize, and Achieve More
-                </h4>
-                <p className="opacity-50 font-medium text-[15px] leading-[1.3] max-w-[334px]">
-                  In a world where daily tasks, communication, and goals often
-                  become overwhelming, Fluid AI offers an innovative solution.
-                  Combining advanced AI technology with a user-friendly
-                  interface, it brings together to-do lists, chats, saved items,
-                  and bucket lists into one seamless platform.
-                </p>
+              <div className="flex flex-col flex-1 max-w-[334px]">
+                <div className="h-4"></div>
+                <div className="space-y-[36px] mt-auto ">
+                  <h4 className="text-[28px] tracking-tight max-w-[320px] leading-none">
+                    Fluid AI: Simplify, Organize, and Achieve More
+                  </h4>
+                  <p className="opacity-50 font-medium text-[15px] leading-[1.3] max-w-[334px]">
+                    In a world where daily tasks, communication, and goals often
+                    become overwhelming, Fluid AI offers an innovative solution.
+                    Combining advanced AI technology with a user-friendly
+                    interface, it brings together to-do lists, chats, saved
+                    items, and bucket lists into one seamless platform.
+                  </p>
+                </div>
+                <div className="opacity-50 mt-auto font-medium">4/4</div>
               </div>
-              <div className="opacity-50 mt-auto font-medium">4/4</div>
             </div>
           </div>
         </div>
         <Carousel1 />
 
-        <div className="mx-14 flex flex-col md:flex-row gap-24 my-40 justify-between">
+        <div className="mx-8 sm:mx-10 md:mx-14 flex flex-col lg:flex-row gap-10 md:gap-14 lg:gap-24 my-40 justify-between">
           <div className="max-w-[420px]">
-            <h2 className="text-5xl leading-[1.1] mb-4 mr-8">
+            <h2 className="text-3xl md:text-5xl leading-[1.1] mb-4 mr-8">
               What can curiosity, wonder, and awe do for you?
             </h2>
             <p className="opacity-50 font-medium leading-[1.3] tracking-tight">
@@ -170,7 +172,7 @@ function App() {
           </div>
           <img
             src={iphone}
-            className="relative md:absolute z-[1] bottom-0 right-1  h-64 md:h-[96%] object-contain"
+            className="absolute z-[1] bottom-0 left-0 md:left-auto md:right-1  h-80 md:h-[96%] object-cover"
           />
         </div>
         <Footer />

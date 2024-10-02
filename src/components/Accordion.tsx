@@ -12,7 +12,7 @@ export default function Accordion({ label }: Props) {
     <div className="mb-2">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="border-b border-white/40 flex justify-between w-full pb-2.5 mb-4"
+        className="border-b text-start  border-white/40 flex justify-between w-full pb-2.5 mb-4"
       >
         <p className="font-medium">{label}</p>
         <img src={isOpen ? minus : plus} className="w-6 h-6" />
