@@ -18,6 +18,19 @@ export default function Hero() {
   const [cloudProgres, setCloudProgres] = useState(0);
   const [itemsProgress, setItemsProgress] = useState(0);
   const parallaxController = useParallaxController();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const scale = windowWidth < 720 ? 0.6 : (windowWidth < 960 ? 0.8 : 1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (parallaxController) parallaxController.update();
@@ -61,7 +74,7 @@ export default function Hero() {
             endScroll={window.innerHeight * 1.55}
             onProgressChange={setItemsProgress}
             speed={10}
-            // easing={"easeInOutCubic"}
+          // easing={"easeInOutCubic"}
           >
             <div className="absolute w-full"></div>
           </Parallax>
@@ -74,7 +87,7 @@ export default function Hero() {
             disabled={cloudProgres > 0}
             rootMargin={{
               bottom: 0,
-              top: window.innerHeight * 0.3,
+              top: window.innerHeight * 0,
               left: 0,
               right: 0,
             }}
@@ -86,7 +99,12 @@ export default function Hero() {
               }}
               className={`w-screen  relative pb-1 z-[1] flex flex-col items-center justify-center`}
             >
-              <Logo size={112 - logoProgress * 80} />
+              <Logo
+                size={
+                  (windowWidth < 720 ? 64 : 112) -
+                  logoProgress * (windowWidth < 720 ? 32 : 80)
+                }
+              />
             </div>
           </Parallax>
           <Parallax
@@ -100,8 +118,8 @@ export default function Hero() {
             onProgressChange={setCloudProgres}
           >
             <div className="h-screen absolute inset-0 w-screen">
-              <div className="flex flex-col items-center mt-36 justify-center relative z-[1] gap-6">
-                <p className="text-[80px] max-w-2xl leading-[1.1] text-center">
+              <div className="flex flex-col items-center mt-40 justify-center relative z-[1] gap-6">
+                <p className="text-5xl sm:text-7xl md:text-[80px] mx-10 md:max-w-2xl leading-[1.1] text-center">
                   Unlock Seamless Efficiency
                 </p>
                 <button
@@ -111,13 +129,13 @@ export default function Hero() {
                   Join Waitlist
                 </button>
               </div>
-              <div className="absolute overflow-x-hidden w-[120vw] -top-28 left-[50vw] -translate-y-0 -translate-x-1/2 ">
+              <div className="absolute overflow-x-hidden w-[200vw] md:w-[120vw] -top-28 left-[50vw] -translate-y-0 -translate-x-1/2 ">
                 <img src={glowCloud} className="h-full w-full object-cover" />
               </div>
               <div
                 className="absolute left-0 top-0"
                 style={{
-                  transform: `translateX(${-100 + itemsProgress * 100}%)`,
+                  transform: `translateX(${-100 + itemsProgress * 100 * scale}%) scale(${scale})`,
                 }}
               >
                 <div className="flex items-end">
@@ -170,20 +188,20 @@ export default function Hero() {
                     <div>Cafe nearby</div>
                   </div>
                 </div>
-                <img src={ticket} className="top-32 relative left-32" />
+                <img src={ticket} className="top-32 relative left-14" />
               </div>
 
               <div
-                className="absolute right-0 top-0"
+                className="absolute right-0 w-[30vw] top-0 "
                 style={{
-                  transform: `translateX(${240 - itemsProgress * 240}%)`,
+                  transform: `translateX(${100 - itemsProgress * 100 * scale}%) scale(${scale})`,
                 }}
               >
-                <div className="rounded-[20px] bg-[#262626]/30 -left-28 w-fit translate-y-[40%] px-6 py-3 text-xl relative border border-white/10">
+                <div className="rounded-[20px] bg-[#262626]/30 w-fit translate-y-[40%] px-6 py-3 text-xl relative border border-white/10">
                   <div className="text-white/60 mb-1">Next To-Do</div>
                   <div>Renew Car insurance</div>
                 </div>
-                <div className="rounded-[20px] flex flex-col top-10 -left-4  min-w-56 bg-[#262626]/30 px-6 py-3 relative border border-white/10">
+                <div className="rounded-[20px] w-fit flex flex-col top-10 left-24  min-w-56 bg-[#262626]/30 px-6 py-3 relative border border-white/10">
                   <div className="self-end flex mb-2">
                     <img
                       className="shrink-0 size-9 overflow-hidden rounded-full  translate-x-6"
@@ -203,14 +221,14 @@ export default function Hero() {
                   <div className="text-white/60 mt-2">10:00 - 14:00</div>
                 </div>
 
-                <div className="rounded-full w-fit top-20 left-20 bg-[#262626]/30 px-5 py-2 text-lg relative border border-white/10">
+                <div className="rounded-full w-fit top-20 left-56 bg-[#262626]/30 px-5 py-2 text-lg relative border border-white/10">
                   <div>Book a flight</div>
                 </div>
-                <div className="rounded-full w-fit top-24 left-16 bg-[#262626]/30 px-5 py-2 text-lg relative border border-white/10">
+                <div className="rounded-full w-fit top-24 left-40 bg-[#262626]/30 px-5 py-2 text-lg relative border border-white/10">
                   <div>Trip ideas</div>
                 </div>
 
-                <div className="relative w-fit shrink-0 rounded-[24px] -left-44  overflow-hidden top-20 border border-white/10">
+                <div className="relative w-fit shrink-0 rounded-[24px] -left-4  overflow-hidden top-32 border border-white/10">
                   <img src={heroImg2} className="w-60 object-cover flex" />
                   <div className="absolute  bg-gradient-to-b  from-[#251F1F30] from-20% to-[#251F1F] to-90%   inset-0 flex px-3 py-2 flex-col  justify-end ">
                     <div className="">
